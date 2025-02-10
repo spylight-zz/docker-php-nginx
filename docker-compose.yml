@@ -2,6 +2,7 @@ services:
     web-server:
       image: nginx:1.21.1
       container_name: web-nginx
+      restart: always
       ports:
         - "80:80"
         - "443:443"
@@ -17,6 +18,7 @@ services:
         context: .
       image: php:8.2-fpm
       container_name: web-php
+      restart: always
       volumes: 
         - ./projects:/var/www/projects
       ports: 
@@ -41,6 +43,7 @@ services:
     db:
       image: mysql:8.0.33
       container_name: web-mysql
+      restart: always
       volumes: 
         - ./confs/mysql_db:/var/lib/mysql
       command: --default-authentication-plugin=mysql_native_password
