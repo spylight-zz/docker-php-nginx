@@ -2,5 +2,5 @@
 Setup environment PHP &amp; Nginx on Docker
 
 # Run
-docker-compose build
-docker-compose up -d
+`docker-compose build`
+`docker-compose up -d`
