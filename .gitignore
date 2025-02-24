@@ -1,0 +1,2 @@
+#ignore db
+confs/mysql_db/*
